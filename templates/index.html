@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Policy Assistant — Method Comparison</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f2f3ee;
+    --ink: #16211c;
+    --line: #d4d6cd;
+    --teal: #0f6b5c;
+    --teal-soft: #e3ede9;
+    --amber: #a8641a;
+    --amber-soft: #f2e6d6;
+    --muted: #5c6459;
+    --serif: "Source Serif 4", Georgia, serif;
+    --sans: "IBM Plex Sans", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", Menlo, monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.55;
+  }
+
+  header {
+    padding: 3.5rem 2rem 2.5rem;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--teal);
+    margin-bottom: 0.9rem;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin: 0 0 0.75rem;
+    letter-spacing: -0.01em;
+    max-width: 16ch;
+  }
+
+  header p.lede {
+    max-width: 62ch;
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin: 0;
+  }
+
+  main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+  }
+
+  section { margin-top: 3rem; }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 0 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* --- Summary cards --- */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .summary-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 1.3rem 1.4rem;
+  }
+
+  .summary-card h3 {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+    color: var(--teal);
+  }
+
+  .metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.35rem 0;
+    border-bottom: 1px dashed var(--line);
+    font-size: 0.88rem;
+  }
+  .metric:last-child { border-bottom: none; }
+  .metric span:first-child { color: var(--muted); }
+  .metric span:last-child { font-family: var(--mono); font-weight: 500; }
+
+  /* --- Prose / findings --- */
+  .findings p {
+    max-width: 74ch;
+    margin: 0 0 1.1rem;
+  }
+  .findings p:last-child { margin-bottom: 0; }
+
+  /* --- Per-question comparison --- */
+  .question-block {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+
+  .question-header {
+    padding: 1rem 1.3rem;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+  }
+
+  .qid {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+
+  .qcategory {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    margin-left: auto;
+  }
+  .qcategory.clear { background: var(--teal-soft); color: var(--teal); }
+  .qcategory.ambiguous { background: var(--amber-soft); color: var(--amber); }
+  .qcategory.unanswerable { background: #eee; color: var(--muted); }
+
+  .qtext {
+    font-weight: 500;
+    font-size: 0.98rem;
+  }
+
+  .method-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .method-cell {
+    padding: 1rem 1.3rem;
+    border-right: 1px solid var(--line);
+    font-size: 0.85rem;
+  }
+  .method-cell:last-child { border-right: none; }
+
+  .method-name {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .method-policy {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+  .method-policy.none { color: var(--muted); font-weight: 400; font-style: italic; }
+
+  .method-answer {
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+  }
+
+  .method-stats {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  footer {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2rem 2rem 3rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-family: var(--mono);
+  }
+
+  @media (max-width: 760px) {
+    .summary-grid, .method-row { grid-template-columns: 1fr; }
+    .method-cell { border-right: none; border-bottom: 1px solid var(--line); }
+    .method-cell:last-child { border-bottom: none; }
+    h1 { font-size: 1.9rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Company Policy Assistant — method comparison</div>
+  <h1>Three ways to answer a policy question, tested side by side</h1>
+  <p class="lede">15 test questions — five clear, five semantically ambiguous, and five with no matching policy at all — run through a keyword search, an LLM reading the full policy list, and an LLM using a retrieval index.</p>
+</header>
+
+<main>
+
+  <section>
+    <h2>Summary</h2>
+    <div class="summary-grid">
+      {% for key, s in summary.items() %}
+      <div class="summary-card">
+        <h3>{{ s.label }}</h3>
+        <div class="metric"><span>Accuracy</span><span>{{ s.accuracy }}</span></div>
+        <div class="metric"><span>Avg. response time</span><span>{{ s.avg_time_ms|int }} ms</span></div>
+        <div class="metric"><span>Avg. tokens used</span><span>{{ s.avg_tokens|int if s.avg_tokens else "N/A" }}</span></div>
+        <div class="metric"><span>Unsupported on trick Qs</span><span>{{ s.unsupported_on_trick_qs }} / 5</span></div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="findings">
+    <h2>What we found</h2>
+    <p>We tested three approaches against a shared set of 15 questions spanning clearly-answerable questions, semantically ambiguous ones, and five deliberately unanswerable "trick" questions with no matching policy. The rules-based keyword search answered instantly at zero token cost, but its lack of stemming caused it to miss a genuinely relevant policy when the question used a plural the policy text didn't ("product" vs. "products"), and a minimum-match threshold — tuned specifically to avoid confidently citing an irrelevant policy on the trick questions — also caused it to abstain on two answerable-but-loosely-worded questions. The LLM without a vector index answered every clear and ambiguous question correctly by reading the entire policy database on every request, at a real efficiency cost of roughly 3,200 tokens and 3.4 seconds per question. The LLM with a vector index reduced average token use by roughly 8x (about 400 tokens) and was measurably faster, by feeding the model only the five most semantically relevant policies — this also let it correctly identify "Work From Abroad Policy" for a paraphrased question about working from a different country, something exact keyword matching could not do without shared vocabulary. All three methods correctly declined to answer any of the five deliberately unanswerable questions rather than fabricating a policy, so none exhibited outright hallucination in this test set; the two LLM methods did, however, differ in confidence calibration on one borderline question about expensing a client dinner, where the no-index method confidently cited a specific policy as directly applicable even though its text never mentions client dinners, while the indexed method more cautiously stated that no policy covered the specific scenario while still surfacing the same real, non-fabricated facts as context.</p>
+    <p>We recommend the LLM-with-vector-index approach for a production policy assistant. It matches the no-index method's accuracy on nearly every question while using roughly one-eighth of the tokens and slightly less time per query, and its retrieval step naturally scales to a much larger policy database — unlike the no-index method, which must re-read the entire database on every call, an approach that only gets slower and more expensive as more policies are added. Its one genuine weakness is that its accuracy is capped by retrieval: on the client-dinner question, the relevant policy did not appear among the top five retrieved results, so the model never had the chance to cite it — a failure mode that is structurally impossible for the no-index method, which always sees every policy. This suggests the indexed approach would benefit from retrieving a slightly larger candidate set, or a light keyword-based fallback for low-confidence retrievals, effectively borrowing the rules-based method's strength in exact-term matching; the rules-based method itself remains valuable as a zero-cost, zero-latency first pass that never fabricates content, but is unsuitable as a sole solution given its inability to handle paraphrased or semantically varied questions without shared vocabulary with the underlying policy text.</p>
+  </section>
+
+  <section>
+    <h2>Every question, side by side</h2>
+    {% for r in rows %}
+    <div class="question-block">
+      <div class="question-header">
+        <span class="qid">{{ r.id }}</span>
+        <span class="qtext">{{ r.question }}</span>
+        <span class="qcategory {{ r.category }}">{{ r.category }}</span>
+      </div>
+      <div class="method-row">
+        {% for key, label in methods.items() %}
+        <div class="method-cell">
+          <div class="method-name">{{ label }}</div>
+          {% set policy = r[key ~ '_policy'] %}
+          <div class="method-policy {{ 'none' if not policy }}">{{ policy if policy else 'No policy cited' }}</div>
+          <div class="method-answer">{{ r[key ~ '_answer'] }}</div>
+          <div class="method-stats">
+            {{ r[key ~ '_time_ms']|float|round(0)|int if r[key ~ '_time_ms'] else 0 }}ms
+            {% if r[key ~ '_tokens'] %} · {{ r[key ~ '_tokens'] }} tokens{% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+
+</main>
+
+<footer>
+  Company Policy Assistant — comparison engine · 98 policies · 15 test questions
+</footer>
+
+</body>
+</html>
