@@ -1,0 +1,167 @@
+[
+  {
+    "answer": "According to the Dress Code Policy: Employees are expected to dress in business casual attire.",
+    "cited_policy": "Dress Code Policy",
+    "response_time_ms": 0.03,
+    "tokens_used": null,
+    "match_score": 2,
+    "id": "q1",
+    "category": "clear",
+    "question": "What is the dress code policy?",
+    "method": "rules_based"
+  },
+  {
+    "answer": "No matching policy was found in the database for this question.",
+    "cited_policy": null,
+    "response_time_ms": 0.04,
+    "tokens_used": null,
+    "match_score": 1,
+    "id": "q2",
+    "category": "clear",
+    "question": "How long is the product warranty?",
+    "method": "rules_based"
+  },
+  {
+    "answer": "According to the Performance Review Policy: Employees receive formal performance reviews annually.",
+    "cited_policy": "Performance Review Policy",
+    "response_time_ms": 0.03,
+    "tokens_used": null,
+    "match_score": 2,
+    "id": "q3",
+    "category": "clear",
+    "question": "How often are performance reviews conducted?",
+    "method": "rules_based"
+  },
+  {
+    "answer": "According to the Password Policy: Passwords must be changed every 90 days and meet complexity requirements.",
+    "cited_policy": "Password Policy",
+    "response_time_ms": 0.03,
+    "tokens_used": null,
+    "match_score": 2,
+    "id": "q4",
+    "category": "clear",
+    "question": "What are the requirements for setting a password?",
+    "method": "rules_based"
+  },
+  {
+    "answer": "According to the Vacation Policy: Employees receive 15 vacation days per year. Unused days may roll over.",
+    "cited_policy": "Vacation Policy",
+    "response_time_ms": 0.03,
+    "tokens_used": null,
+    "match_score": 2,
+    "id": "q5",
+    "category": "clear",
+    "question": "How much vacation time do employees get?",
+    "method": "rules_based"
+  },
+  {
+    "answer": "According to the Work From Abroad Policy: Employees may work abroad for up to 30 days with approval.",
+    "cited_policy": "Work From Abroad Policy",
+    "response_time_ms": 0.03,
+    "tokens_used": null,
+    "match_score": 2,
+    "id": "q6",
+    "category": "ambiguous",
+    "question": "Can I work from a different country for a while?",
+    "method": "rules_based"
+  },
+  {
+    "answer": "According to the Security Incident Policy: Security incidents must be reported immediately.",
+    "cited_policy": "Security Incident Policy",
+    "response_time_ms": 0.05,
+    "tokens_used": null,
+    "match_score": 2,
+    "id": "q7",
+    "category": "ambiguous",
+    "question": "What happens if there's a data breach or security incident?",
+    "method": "rules_based"
+  },
+  {
+    "answer": "According to the Laptop Usage Policy: Company laptops must be used for business purposes only.",
+    "cited_policy": "Laptop Usage Policy",
+    "response_time_ms": 0.04,
+    "tokens_used": null,
+    "match_score": 2,
+    "id": "q8",
+    "category": "ambiguous",
+    "question": "Am I allowed to connect my personal laptop to company systems from home?",
+    "method": "rules_based"
+  },
+  {
+    "answer": "No matching policy was found in the database for this question.",
+    "cited_policy": null,
+    "response_time_ms": 0.03,
+    "tokens_used": null,
+    "match_score": 1,
+    "id": "q9",
+    "category": "ambiguous",
+    "question": "Who do I talk to if I think a manager is doing something unethical?",
+    "method": "rules_based"
+  },
+  {
+    "answer": "No matching policy was found in the database for this question.",
+    "cited_policy": null,
+    "response_time_ms": 0.03,
+    "tokens_used": null,
+    "match_score": 1,
+    "id": "q10",
+    "category": "ambiguous",
+    "question": "Can I expense a dinner with a client?",
+    "method": "rules_based"
+  },
+  {
+    "answer": "No matching policy was found in the database for this question.",
+    "cited_policy": null,
+    "response_time_ms": 0.03,
+    "tokens_used": null,
+    "match_score": 1,
+    "id": "q11",
+    "category": "unanswerable",
+    "question": "Can I bring my dog to the office?",
+    "method": "rules_based"
+  },
+  {
+    "answer": "No matching policy was found in the database for this question.",
+    "cited_policy": null,
+    "response_time_ms": 0.02,
+    "tokens_used": null,
+    "match_score": 0,
+    "id": "q12",
+    "category": "unanswerable",
+    "question": "What is the policy on smoking indoors?",
+    "method": "rules_based"
+  },
+  {
+    "answer": "No matching policy was found in the database for this question.",
+    "cited_policy": null,
+    "response_time_ms": 0.03,
+    "tokens_used": null,
+    "match_score": 1,
+    "id": "q13",
+    "category": "unanswerable",
+    "question": "Do we offer a company gym membership?",
+    "method": "rules_based"
+  },
+  {
+    "answer": "No matching policy was found in the database for this question.",
+    "cited_policy": null,
+    "response_time_ms": 0.03,
+    "tokens_used": null,
+    "match_score": 1,
+    "id": "q14",
+    "category": "unanswerable",
+    "question": "Can I get reimbursed for a home espresso machine?",
+    "method": "rules_based"
+  },
+  {
+    "answer": "No matching policy was found in the database for this question.",
+    "cited_policy": null,
+    "response_time_ms": 0.02,
+    "tokens_used": null,
+    "match_score": 1,
+    "id": "q15",
+    "category": "unanswerable",
+    "question": "What is our policy on accepting cryptocurrency payments from vendors?",
+    "method": "rules_based"
+  }
+]

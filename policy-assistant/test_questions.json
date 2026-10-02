@@ -1,0 +1,19 @@
+[
+  {"id": "q1", "category": "clear", "question": "What is the dress code policy?"},
+  {"id": "q2", "category": "clear", "question": "How long is the product warranty?"},
+  {"id": "q3", "category": "clear", "question": "How often are performance reviews conducted?"},
+  {"id": "q4", "category": "clear", "question": "What are the requirements for setting a password?"},
+  {"id": "q5", "category": "clear", "question": "How much vacation time do employees get?"},
+
+  {"id": "q6", "category": "ambiguous", "question": "Can I work from a different country for a while?"},
+  {"id": "q7", "category": "ambiguous", "question": "What happens if there's a data breach or security incident?"},
+  {"id": "q8", "category": "ambiguous", "question": "Am I allowed to connect my personal laptop to company systems from home?"},
+  {"id": "q9", "category": "ambiguous", "question": "Who do I talk to if I think a manager is doing something unethical?"},
+  {"id": "q10", "category": "ambiguous", "question": "Can I expense a dinner with a client?"},
+
+  {"id": "q11", "category": "unanswerable", "question": "Can I bring my dog to the office?"},
+  {"id": "q12", "category": "unanswerable", "question": "What is the policy on smoking indoors?"},
+  {"id": "q13", "category": "unanswerable", "question": "Do we offer a company gym membership?"},
+  {"id": "q14", "category": "unanswerable", "question": "Can I get reimbursed for a home espresso machine?"},
+  {"id": "q15", "category": "unanswerable", "question": "What is our policy on accepting cryptocurrency payments from vendors?"}
+]

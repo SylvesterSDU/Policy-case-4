@@ -1,0 +1,17 @@
+{
+  "rules_based": {
+    "unsupported_answers_on_trick_questions": "0/5",
+    "avg_response_time_ms": 0.0,
+    "avg_tokens_used": "N/A (no LLM call)"
+  },
+  "llm_no_index": {
+    "unsupported_answers_on_trick_questions": "0/5",
+    "avg_response_time_ms": 3358.4,
+    "avg_tokens_used": 3212.3
+  },
+  "llm_with_index": {
+    "unsupported_answers_on_trick_questions": "0/5",
+    "avg_response_time_ms": 2918.6,
+    "avg_tokens_used": 402.9
+  }
+}

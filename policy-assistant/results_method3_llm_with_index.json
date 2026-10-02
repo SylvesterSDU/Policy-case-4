@@ -1,0 +1,407 @@
+[
+  {
+    "answer": "Employees are expected to dress in business casual attire.",
+    "cited_policy": "Dress Code Policy",
+    "response_time_ms": 2777.01,
+    "input_tokens": 366,
+    "output_tokens": 29,
+    "tokens_used": 395,
+    "citation_is_real": true,
+    "retrieved_policies": [
+      "Dress Code Policy",
+      "Customer Interaction Policy",
+      "Code of Conduct",
+      "Equal Opportunity Policy",
+      "Office Access Policy"
+    ],
+    "retrieval_similarities": [
+      0.756,
+      0.645,
+      0.638,
+      0.627,
+      0.618
+    ],
+    "id": "q1",
+    "category": "clear",
+    "question": "What is the dress code policy?",
+    "method": "llm_with_index"
+  },
+  {
+    "answer": "Products are covered under warranty for one year.",
+    "cited_policy": "Warranty Policy",
+    "response_time_ms": 2025.67,
+    "input_tokens": 358,
+    "output_tokens": 22,
+    "tokens_used": 380,
+    "citation_is_real": true,
+    "retrieved_policies": [
+      "Warranty Policy",
+      "Product Return Policy",
+      "Quality Assurance Policy",
+      "Support Ticket Policy",
+      "Shipping Policy"
+    ],
+    "retrieval_similarities": [
+      0.796,
+      0.635,
+      0.633,
+      0.578,
+      0.567
+    ],
+    "id": "q2",
+    "category": "clear",
+    "question": "How long is the product warranty?",
+    "method": "llm_with_index"
+  },
+  {
+    "answer": "Performance reviews are conducted annually.",
+    "cited_policy": "Performance Review Policy",
+    "response_time_ms": 2949.97,
+    "input_tokens": 354,
+    "output_tokens": 20,
+    "tokens_used": 374,
+    "citation_is_real": true,
+    "retrieved_policies": [
+      "Performance Review Policy",
+      "Campaign Review Policy",
+      "Account Management Policy",
+      "Supplier Evaluation Policy",
+      "Promotion Policy"
+    ],
+    "retrieval_similarities": [
+      0.821,
+      0.697,
+      0.686,
+      0.67,
+      0.665
+    ],
+    "id": "q3",
+    "category": "clear",
+    "question": "How often are performance reviews conducted?",
+    "method": "llm_with_index"
+  },
+  {
+    "answer": "Passwords must be changed every 90 days and meet complexity requirements.",
+    "cited_policy": "Password Policy",
+    "response_time_ms": 4045.89,
+    "input_tokens": 371,
+    "output_tokens": 34,
+    "tokens_used": 405,
+    "citation_is_real": true,
+    "retrieved_policies": [
+      "Password Policy",
+      "Background Check Policy",
+      "File Naming Policy",
+      "Account Management Policy",
+      "Remote Meeting Policy"
+    ],
+    "retrieval_similarities": [
+      0.766,
+      0.564,
+      0.563,
+      0.552,
+      0.55
+    ],
+    "id": "q4",
+    "category": "clear",
+    "question": "What are the requirements for setting a password?",
+    "method": "llm_with_index"
+  },
+  {
+    "answer": "Employees receive 15 vacation days per year.",
+    "cited_policy": "Vacation Policy",
+    "response_time_ms": 3665.24,
+    "input_tokens": 393,
+    "output_tokens": 24,
+    "tokens_used": 417,
+    "citation_is_real": true,
+    "retrieved_policies": [
+      "Vacation Policy",
+      "Parental Leave Policy",
+      "Bereavement Leave Policy",
+      "Holiday Schedule Policy",
+      "Work From Abroad Policy"
+    ],
+    "retrieval_similarities": [
+      0.782,
+      0.682,
+      0.667,
+      0.666,
+      0.652
+    ],
+    "id": "q5",
+    "category": "clear",
+    "question": "How much vacation time do employees get?",
+    "method": "llm_with_index"
+  },
+  {
+    "answer": "Yes, you may work abroad for up to 30 days with approval.",
+    "cited_policy": "Work From Abroad Policy",
+    "response_time_ms": 5093.5,
+    "input_tokens": 390,
+    "output_tokens": 31,
+    "tokens_used": 421,
+    "citation_is_real": true,
+    "retrieved_policies": [
+      "Work From Abroad Policy",
+      "Flexible Hours Policy",
+      "Conference Attendance Policy",
+      "Remote Work Policy",
+      "Vacation Policy"
+    ],
+    "retrieval_similarities": [
+      0.781,
+      0.609,
+      0.601,
+      0.601,
+      0.6
+    ],
+    "id": "q6",
+    "category": "ambiguous",
+    "question": "Can I work from a different country for a while?",
+    "method": "llm_with_index"
+  },
+  {
+    "answer": "Security incidents must be reported immediately.",
+    "cited_policy": "Security Incident Policy",
+    "response_time_ms": 2335.06,
+    "input_tokens": 374,
+    "output_tokens": 21,
+    "tokens_used": 395,
+    "citation_is_real": true,
+    "retrieved_policies": [
+      "Security Incident Policy",
+      "Incident Response Policy",
+      "Data Privacy Policy",
+      "System Downtime Policy",
+      "Disaster Recovery Policy"
+    ],
+    "retrieval_similarities": [
+      0.757,
+      0.671,
+      0.601,
+      0.596,
+      0.574
+    ],
+    "id": "q7",
+    "category": "ambiguous",
+    "question": "What happens if there's a data breach or security incident?",
+    "method": "llm_with_index"
+  },
+  {
+    "answer": "The provided policies do not address whether you are allowed to connect a personal laptop to company systems from home.",
+    "cited_policy": null,
+    "response_time_ms": 1741.01,
+    "input_tokens": 382,
+    "output_tokens": 32,
+    "tokens_used": 414,
+    "citation_is_real": null,
+    "retrieved_policies": [
+      "Laptop Usage Policy",
+      "Internet Usage Policy",
+      "Remote Access Policy",
+      "Home Office Equipment Policy",
+      "Software Installation Policy"
+    ],
+    "retrieval_similarities": [
+      0.743,
+      0.688,
+      0.664,
+      0.662,
+      0.648
+    ],
+    "id": "q8",
+    "category": "ambiguous",
+    "question": "Am I allowed to connect my personal laptop to company systems from home?",
+    "method": "llm_with_index"
+  },
+  {
+    "answer": "You may report unethical behavior anonymously.",
+    "cited_policy": "Whistleblower Policy",
+    "response_time_ms": 2688.77,
+    "input_tokens": 373,
+    "output_tokens": 22,
+    "tokens_used": 395,
+    "citation_is_real": true,
+    "retrieved_policies": [
+      "Whistleblower Policy",
+      "Code of Conduct",
+      "Conflict of Interest Policy",
+      "Escalation Policy",
+      "Anti-Harassment Policy"
+    ],
+    "retrieval_similarities": [
+      0.749,
+      0.612,
+      0.596,
+      0.594,
+      0.588
+    ],
+    "id": "q9",
+    "category": "ambiguous",
+    "question": "Who do I talk to if I think a manager is doing something unethical?",
+    "method": "llm_with_index"
+  },
+  {
+    "answer": "No policy covers the specific act of expensing a dinner with a client, though expenses over $500 require prior approval from Finance and client gifts must comply with company guidelines.",
+    "cited_policy": null,
+    "response_time_ms": 1354.33,
+    "input_tokens": 379,
+    "output_tokens": 53,
+    "tokens_used": 432,
+    "citation_is_real": null,
+    "retrieved_policies": [
+      "Client Gift Policy",
+      "Corporate Card Policy",
+      "Expense Approval Policy",
+      "Travel Reimbursement Policy",
+      "Conference Attendance Policy"
+    ],
+    "retrieval_similarities": [
+      0.696,
+      0.656,
+      0.635,
+      0.621,
+      0.601
+    ],
+    "id": "q10",
+    "category": "ambiguous",
+    "question": "Can I expense a dinner with a client?",
+    "method": "llm_with_index"
+  },
+  {
+    "answer": "There is no company policy that covers bringing dogs to the office.",
+    "cited_policy": null,
+    "response_time_ms": 2171.13,
+    "input_tokens": 377,
+    "output_tokens": 28,
+    "tokens_used": 405,
+    "citation_is_real": null,
+    "retrieved_policies": [
+      "Office Access Policy",
+      "Workplace Accommodation Policy",
+      "Remote Work Policy",
+      "Home Office Equipment Policy",
+      "Mobile Device Policy"
+    ],
+    "retrieval_similarities": [
+      0.658,
+      0.654,
+      0.643,
+      0.64,
+      0.638
+    ],
+    "id": "q11",
+    "category": "unanswerable",
+    "question": "Can I bring my dog to the office?",
+    "method": "llm_with_index"
+  },
+  {
+    "answer": "There is no policy in the database regarding smoking indoors.",
+    "cited_policy": null,
+    "response_time_ms": 2041.08,
+    "input_tokens": 368,
+    "output_tokens": 28,
+    "tokens_used": 396,
+    "citation_is_real": null,
+    "retrieved_policies": [
+      "Meeting Room Booking Policy",
+      "Background Check Policy",
+      "Workplace Cleanliness Policy",
+      "Parking Policy",
+      "Dress Code Policy"
+    ],
+    "retrieval_similarities": [
+      0.629,
+      0.611,
+      0.608,
+      0.605,
+      0.604
+    ],
+    "id": "q12",
+    "category": "unanswerable",
+    "question": "What is the policy on smoking indoors?",
+    "method": "llm_with_index"
+  },
+  {
+    "answer": "There is no policy in our database that covers company gym memberships.",
+    "cited_policy": null,
+    "response_time_ms": 5132.45,
+    "input_tokens": 377,
+    "output_tokens": 24,
+    "tokens_used": 401,
+    "citation_is_real": null,
+    "retrieved_policies": [
+      "Home Office Equipment Policy",
+      "Mentorship Program Policy",
+      "Conference Attendance Policy",
+      "Training Reimbursement Policy",
+      "Work From Abroad Policy"
+    ],
+    "retrieval_similarities": [
+      0.629,
+      0.625,
+      0.615,
+      0.613,
+      0.613
+    ],
+    "id": "q13",
+    "category": "unanswerable",
+    "question": "Do we offer a company gym membership?",
+    "method": "llm_with_index"
+  },
+  {
+    "answer": "No, there is no company policy that allows for the reimbursement of a home espresso machine.",
+    "cited_policy": null,
+    "response_time_ms": 2609.41,
+    "input_tokens": 387,
+    "output_tokens": 29,
+    "tokens_used": 416,
+    "citation_is_real": null,
+    "retrieved_policies": [
+      "Home Office Equipment Policy",
+      "Training Reimbursement Policy",
+      "Travel Reimbursement Policy",
+      "Mobile Device Policy",
+      "Expense Approval Policy"
+    ],
+    "retrieval_similarities": [
+      0.696,
+      0.657,
+      0.631,
+      0.627,
+      0.622
+    ],
+    "id": "q14",
+    "category": "unanswerable",
+    "question": "Can I get reimbursed for a home espresso machine?",
+    "method": "llm_with_index"
+  },
+  {
+    "answer": "There is no policy in the provided database that covers the acceptance of cryptocurrency payments from vendors.",
+    "cited_policy": null,
+    "response_time_ms": 3148.11,
+    "input_tokens": 362,
+    "output_tokens": 35,
+    "tokens_used": 397,
+    "citation_is_real": null,
+    "retrieved_policies": [
+      "Vendor Management Policy",
+      "Procurement Policy",
+      "Supplier Evaluation Policy",
+      "Content Publishing Policy",
+      "Remote Meeting Policy"
+    ],
+    "retrieval_similarities": [
+      0.676,
+      0.635,
+      0.6,
+      0.592,
+      0.591
+    ],
+    "id": "q15",
+    "category": "unanswerable",
+    "question": "What is our policy on accepting cryptocurrency payments from vendors?",
+    "method": "llm_with_index"
+  }
+]
